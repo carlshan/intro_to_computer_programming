@@ -97,9 +97,9 @@ Inside of the <script> </script> tags, we're going to write a function. Put the 
 
 ```html
 <script>
-			function say_hello() {
-				alert("Hello there!");
-			};
+	function say_hello() {
+		alert("Hello there!");
+	};
 </script>
 ```
 
