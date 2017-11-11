@@ -116,4 +116,5 @@ Now, when you press the button, it will pop an alert on your screen that says "H
 1. Try to modify the `say_hello()` function so that it alerts "Hello " + your name, where your name is whatever is typed in the input box.
 	1. **HINT:** You will have to use the `document.getElementById()` function. You can use this [Khan Academy tutorial](https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-access/p/finding-elements-by-id) to learn more.
 2. Write another function called `put_name()` so that it puts whatever is typed in the input box onto the HTML screen.
-	1. **HINT:** You will have to set the .innerHTML attribute of something that is found by `document.getElementById()`.
+	1. **HINT:** You will have to set the `.innerHTML` attribute of something that is found by `document.getElementById()`. Take a look at the Khan Academy tutorial linked above to learn more.
+3. Add another button and write a function called `insert_picture()` that inserts a picture of a kitten on the web page when the button is pressed.
