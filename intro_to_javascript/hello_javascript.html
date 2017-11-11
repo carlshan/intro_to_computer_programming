@@ -2,14 +2,26 @@
 <html>
 	<head>
 		<script type="text/javascript">
-			function func(name) {
-				alert("Hello " + name);
+			function say_hello() {
+				var name_box = document.getElementById("name-box");
+				var name = name_box.value;
+				alert("Hello " + name + "!");
+			};
+
+			function put_name() {
+				var name_box = document.getElementById("name-box");
+				var name = name_box.value;
+
+				var element = document.getElementById("name-header");
+				element.innerHTML = name;
 			};
 		</script>
 	</head>
 	<body>
-		<p id="demo"> </p>
-		<button onclick="func('testing')">Press me</button>
+		<h1 id="name-header"> </h1>
+		<input type="text" id="name-box">
+		<button onclick="say_hello()">Press to alert</button>
+		<button onclick="put_name()">Press to put name</button>
 
 	</body>
 </html>
