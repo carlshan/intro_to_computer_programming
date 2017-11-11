@@ -45,8 +45,8 @@ HTML files also have a body, which is contained inside the <body> </body> tags.
 Add the following two lines of code between the <body> </body> tags:
 
 ``` html
-		<h1 id="name-header">Hello </h1>
-		<input type="text" id="name-box">
+<h1 id="name-header">Hello </h1>
+<input type="text" id="name-box">
 ```
 
 Try opening your web browser. You should see a website with with the text `Hello` and an input box.
@@ -95,14 +95,6 @@ This is called the <script> tag. Between the opening <script> and the closing </
 #### Writing Our First JavaScript Function
 Inside of the <script> </script> tags, we're going to write a function. Put the following function inside the tags:
 
-```javascript
-<script>
-			function say_hello() {
-				alert("Hello there!");
-			};
-</script>
-```
-
 ```html
 <script>
 			function say_hello() {
@@ -110,3 +102,18 @@ Inside of the <script> </script> tags, we're going to write a function. Put the 
 			};
 </script>
 ```
+
+Now, modify the first button in the <body> so that it looks like the following:
+
+```html
+<button onclick="say_hello()">Press to alert</button>
+```
+
+Now, when you press the button, it will pop an alert on your screen that says "Hello there!"
+
+
+#### Exercises:
+1. Try to modify the `say_hello()` function so that it alerts "Hello " + your name, where your name is whatever is typed in the input box.
+	1. **HINT:** You will have to use the `document.getElementById()` function. You can use this [Khan Academy tutorial](https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-access/p/finding-elements-by-id) to learn more.
+2. Write another function called `put_name()` so that it puts whatever is typed in the input box onto the HTML screen.
+	1. **HINT:** You will have to set the .innerHTML attribute of something that is found by `document.getElementById()`.
