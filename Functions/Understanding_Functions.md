@@ -3,8 +3,8 @@ By Carl Shan of [The Nueva School](www.nuevaschool.org)
 
 ```python
 def add_five(number):
-	result = number + 5
-	return result
+    result = number + 5
+    return result
 ```
 *Above is an example of a function that adds 5 to your input, and then returns the result.*
 
@@ -13,6 +13,8 @@ def add_five(number):
 What the heck are functions?
 
 **Imagine this**: Your best friend loves cakes and they wants you to bake a cake for a friend every single day in the month of May. (Okay, that’s a strange example. But bear with me here!) 
+
+![Bake Cake](https://media1.tenor.com/images/6ae3236af1eaeada21076ec022f405c5/tenor.gif?itemid=4802552)
 
 Well, since you’re doing it so often, you should probably store the list of ingredients you need and how to assemble them all together. After all, you don’t want to have to remember the list of ingredients and instructions from scratch each time.
 
@@ -48,16 +50,43 @@ my_function_name(5, 10, 123)
 
 In the above line of code, I will invoke the `my_function_name` recipe with the inputs `5`, `10`, and `123`.
 
-In programming, inputs to functions are called **arguments** or **parameters**
+We call the ingredients a function needs `arguments`.
 
-Okay, now let's look at a real example.
+![Arguments](https://media1.tenor.com/images/e98067ca38e448ea5b50d951829ae330/tenor.gif?itemid=8606116)
+
+No no no. Not *those* type of `arguments`.
+
+In programming, inputs to functions are called **arguments** or **parameters**. d
+
+Why do we call them `arguments`? Well it's mostly because computer scientists borrowed that vocabulary from mathematicians, who called them arguments in mathematical functions like: 
+`f(x) = x + 5`.
+
+In math class, we would say: The function `f` has as an argument the value `x` and the result of this function is `x + 5`.
+
+
+### Do we need to argue?
+Not all functions need to take `arguments`. You can have functions that don't take anything as an ingredient. For example:
+
+```python
+def no_inputs_needed():
+
+    # Stuff my function does
+    # More stuff my function does
+    # ...
+    # ...
+    return something
+```
+
+In the above example, the function `no_inputs_needed` doesn't need anything as input.
+
+Okay, now let's look at a real example of how we can use functions.
 
 ### Function Example
 
 ```python
 def add_five(number):
-	result = number + 5
-	return result
+    result = number + 5
+    return result
 ```
 
 Here is an example of a function called `add_five` that adds `5` to your input (which we defined to be the word `number`), stores this result in a variable called `result`, and then returns this variable.
@@ -69,21 +98,27 @@ Now let's break it down line by line.
 ### Breaking it Down
 We're going to look at each line of code to understand what it does.
 
-`def add_five(number):`
+```python
+def add_five(number):
+```
+
+I create a function by using the `def` keyword. Whatever I type aftewards will be the name of a function.
+
+> **NOTE:** Functions cannot have spaces in their names! Capitalization also matters and functions can't begin with numbers. In general, name your functions as whole words that describe what a function does.
 
 This line defines a function `add_five` and defines it as taking one input. This input is called `number`.
 
 ```python
 def add_five(number):
-	result = number + 5
+    result = number + 5
 ```
 
 The next line takes the input, `number` and adds 5 to it. It then stores this sum into a variable called `result`.
 
 ```python
 def add_five(number):
-	result = number + 5
-	return result
+    result = number + 5
+    return result
 ```
 
 The final line returns the variable `result`. When a function returns it value, that means it produces this value as it’s output. 
@@ -103,15 +138,24 @@ If you forget to `return` a value from a function, the function returns the valu
 ### "Calling" your function
 When programmers use a function, we say that they are `calling` the function. You can think of it as invoking the function.
 
-Here's how you `call` a function:
+![Calling](https://media1.tenor.com/images/ae34caaadfd3a4aeb61b385e1031d6d0/tenor.gif?itemid=8062686)
+*Maybe Ryan Reynolds is `calling` a function?*
 
-`function_name(input1, input2)`
+Okay, so you've seen how Ryan Reynolds `calls` a function.
+
+Here's how **you** `call` a function in programming:
+
+```python
+function_name(input1, input2)
+```
 
 Simply put, you type the function name and put inputs or ingredients in between the parantheses.
 
 For example:
 
-`total = add_five(100)`
+```python
+total = add_five(100)
+```
 
 The above lines of code runs the `add_five` function with the input `100`, and then stores the output of the function into a variable called `total`.
 
@@ -121,8 +165,31 @@ Here is a more complex function that performs more operations. What do you think
 
 ```python
 def what_does_this_do(a, b, c, d):
-	if a > b:
-		return c + d
-	else:
-		return (a * b * c) / (d + 2)
+    if a > b:
+        return c + d
+    else:
+        return (a * b * c) / (d + 2)
 ```
+
+What will the following function calls return?
+
+```python
+what_does_this_do(5, 10, 15, 20)
+```
+
+What about:
+
+```python
+what_does_this_do(10, 5, 15, 20)
+```
+
+Try it in your own Python interpreter (type `python` in Terminal to access the interpreter) to find out!
+
+## Summary
+
+Here are the key points to remember:
+
+1. **Functions are like recipes:** Functions allow us to create a list of instructions and ingredients that we can use again and again.
+2. **Functions can take any number of inputs:** Like recipes, functions sometimes requires ingredients. You can have functions that take in inputs, also called `arguments` or `parameters`.
+3. **Functions should `return` something:** Functions, like recipes, should `return` something. If you don't have `return` statement as the final line of code in  your function your function will return a special object called `None` by default. That represents the concept of nothing.
+4. **You can `call` a function:** You `call` a function by typing the name of the function then putting `arguments` it needs in between parantheses.
