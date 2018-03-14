@@ -56,7 +56,7 @@ We call the ingredients a function needs `arguments`.
 
 No no no. Not *those* type of `arguments`.
 
-In programming, inputs to functions are called **arguments** or **parameters**. d
+In programming, inputs to functions are called **arguments** or **parameters**.
 
 Why do we call them `arguments`? Well it's mostly because computer scientists borrowed that vocabulary from mathematicians, who called them arguments in mathematical functions like: 
 `f(x) = x + 5`.
@@ -139,6 +139,7 @@ If you forget to `return` a value from a function, the function returns the valu
 When programmers use a function, we say that they are `calling` the function. You can think of it as invoking the function.
 
 ![Calling](https://media1.tenor.com/images/ae34caaadfd3a4aeb61b385e1031d6d0/tenor.gif?itemid=8062686)
+
 *Maybe Ryan Reynolds is `calling` a function?*
 
 Okay, so you've seen how Ryan Reynolds `calls` a function.
