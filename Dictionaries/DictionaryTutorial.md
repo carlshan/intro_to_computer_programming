@@ -73,6 +73,22 @@ In my example above, my `key` is `'Carl'` and the value associated with that `ke
 
 I'm a wealthy man!
 
+### Getting a value associated with a dictionary
+If you want to *retrieve* a value associated with a `key`, you just need to do the following:
+
+```python
+bank['Carl']
+```
+
+The above will print `100000`.
+
+In general the syntax to access a `value` associated with a `key` is:
+
+```python
+name_of_your_dictionary[name_of_key]
+```
+
+
 ### Increasing my balance: Changing the value associated with a key
 
 This is how you change the amount of money I have

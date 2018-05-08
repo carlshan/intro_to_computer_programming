@@ -30,18 +30,18 @@ print(my_dict)
 EXAMPLE:
 
 ```python
-def count_appearances(counts, list_to_count):
+def count_appearances(counter, list_to_count):
     # This function should loop over list_to_count and increment the value
     # associated with the key that is being looped over and increment it by one each time
     "***YOUR CODE HERE***"
    
 
-pokemon_zoo = {'pikachu': 0, 'blastoise': 1}
-captured_pokemon = ['pikachu', 'pikachu', 'blastoise']
-count_appearances(pokemon_zoo, captured_pokemon)
+counter = {'carl': 0, 'joe': 1, 'scott': 0, 'cristina': 1}
+people = ['carl', 'carl', 'scott', 'cristina']
+count_appearances(counter, people)
 
-print(pokemon_zoo)
-# the above prints pokemon_zoo = {'pikachu': 2, 'blastoise': 2}
+print(counter)
+# If your function works, then the above should print {'carl': 2, 'joe': 1, 'scott': 1, 'cristina': 2}
 ```
 
 ### Advanced:
