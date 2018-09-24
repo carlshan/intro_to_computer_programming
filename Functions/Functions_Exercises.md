@@ -105,7 +105,7 @@ print(unique)
 > **HINT**: Look up how the `in` operator works in in Python. Think about how you can use that.
 
 ## Advanced:
-1. Solve the following problem (from [Project Euler](www.projecteuler.net)): 
+1. Solve the following problem (from [Project Euler](https://projecteuler.net/)): 
 
 ```
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -122,7 +122,7 @@ Write a function that returns the sum of all the multiples of 3 or 5 below 1000.
 However, `10 % 4` will return 2, since there is a remainder of 2 when 10 is divided by 4.
 > 
 
-2. Solve the following problem (from [Project Euler](www.projecteuler.net)): 
+2. Solve the following problem (from [Project Euler](https://projecteuler.net/)): 
 
 ```
 A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
@@ -155,3 +155,7 @@ print(binarize(10))
 # 1010
 
 ```
+
+5. Write a program where users can play tic-tac-toe against each other. 
+
+> **HINT**: You will likely need to use the `raw_input()` function. You will also need to run your code in Terminal to allow for user input, since Atom won't allow you to easily enter in input.
