@@ -22,13 +22,18 @@ fib(25)
 # should print 75025
 ```
 
-2. Make a recursive function called `factorial` that takes a number `n` as input and returns the factorial of that number.
+2. Make a recursive function called `countdown` that takes a number `n` as input and prints `n`, `n-1` ... until it reaches `0`.
 
 Example:
 
 ```python
-factorial(5)
-# should print 120)
+countdown(5)
+# the above should print
+# 5
+# 4
+# 3
+# 2
+# 1
 ```
 
 3. Make a recursive function called `recursive_sum` that takes a list `l` as input and computes the sum of the list in a recursive manner.
