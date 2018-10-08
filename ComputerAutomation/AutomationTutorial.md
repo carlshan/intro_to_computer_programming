@@ -1,4 +1,4 @@
-# Automating things on your computer
+# Automating things on your computer with PyAutoGui
 By Carl Shan of [the Nueva School](www.nuevaschool.org)
 
 ## Intro
@@ -24,9 +24,9 @@ Step 2: installing `pyautogui`
 
 * Now we're going to use `pip` to install `pyautogui`.
 * First, let's setup some things that `pyautogui` needs
-    * In Terminal type `sudo pip install pyobjc-core`
-    * Then type `sudo pip install pyobjc`
-* In Terminal type `sudo pip install pyautogui`
+    * In Terminal type `pip install --user pyobjc-core`
+    * Then type `pip install --user pyobjc`
+* In Terminal type `pip install --user pyautogui`
 
 
 ## We now have `pyautogui` installed!
@@ -37,7 +37,7 @@ So what can it do?
 
 ## All of `pyautogui`'s functions
 
-If you want to read about all that `pyautogui` can do, you should look at this website: [PyAutoGui Documentation](https://pyautogui.readthedocs.io/en/latest/cheatsheet.html).
+If you want to read about all that `pyautogui` can do, you should look at this website: [Here's the official PyAutoGui website that details all the things that you can do with it.](https://pyautogui.readthedocs.io/en/latest/cheatsheet.html).
 
 Specifically, I encourage you to look at the following tutorials:
 
@@ -50,6 +50,8 @@ Specifically, I encourage you to look at the following tutorials:
 
 I've outlined a few example of things you can to do:
 
+
+### Important Note
 **IMPORTANT**: If you ever write a program in `pyautogui` that you need to shut down, move your mouse to the top-left corner of your screen.
 
 That's `pyautogui`'s failsafe. You'll break out of it.
@@ -61,7 +63,7 @@ import pyautogui
 # # This will click your mouse
 pyautogui.click(button='left', clicks=2, interval=0.25)
 
-## This will click your right mouse twice
+## This will click your right mouse twice with a delay of 0.25 seconds between each click
 pyautogui.doubleClick(button='right')
 
 ```
@@ -71,9 +73,9 @@ pyautogui.doubleClick(button='right')
 
 ```python
 # This will slowly move your mouse to 500, 500 over the course of two seconds
-pyautogui.moveTo(500, 500, duration=2, tween=pyautogui.easeInOutQuad)  # use tweening/easing function to move mouse over 2 seconds.
+pyautogui.moveTo(x=500, y=500, duration=2)
 
-# Then you click.
+# Then you can click on something.
 pyautogui.click(button='left')
 ```
 
@@ -94,7 +96,7 @@ pyautogui.hotkey('command', 'c')
 pyautogui.typewrite("Yeah, I'm awesome.", interval=0.1)
 ```
 
-### Getting where your mouse is
+### Figuring out where your mouse is
 
 ```python
 # Here's how you get the width and height of your screen
@@ -103,3 +105,12 @@ width, height = pyautogui.size()
 # Here's how you get the X and Y value of your mouse
 mouse_x, mouse_y = pyautogui.position()
 ```
+
+In addition if you need to locate the exact coordinates of something on your screen, you can press `Command + Shift + 4` to bring up the screenshot tool. This tool will also have numbers underneath the crosshairs indicating the `x` and `y` coordinates of wherever your mouse is hovering over.
+
+
+## Additional Resources
+If you want to see what else PyAutoGui can do, see the following: 
+
+1. [Here's the official PyAutoGui website that details all the things that you can do with it.](https://pyautogui.readthedocs.io/en/latest/cheatsheet.html).
+2. [*Automate The Boring Stuff* by the author of PyAutoGui](https://automatetheboringstuff.com/chapter18/)
