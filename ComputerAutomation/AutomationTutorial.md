@@ -24,7 +24,7 @@ Step 2: installing `pyautogui`
 
 * Now we're going to use `pip` to install `pyautogui`.
 * First, let's setup some things that `pyautogui` needs
-    * In Terminal type `sudo pip install pyobjc`
+    * In Terminal type `sudo pip install pyobjc-core`
     * Then type `sudo pip install pyobjc`
 * In Terminal type `sudo pip install pyautogui`
 
