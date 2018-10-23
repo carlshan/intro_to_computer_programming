@@ -19,7 +19,7 @@ For example, below is a set of instructions for parents.
 
 **Example: The "Parenting" API**
 
-![Parenting Manual](https://github.com/carlshan/intro_to_computer_programming/blob/master/Images/clever_api.png?raw=true)
+![Parenting Manual](http://cdn.emgn.com/wp-content/uploads/2014/02/Funniest-Parenting-Instructions-Feature.jpg)
 
 Like the examples above, many pieces of software also have examples of "Good" and correct ways of using that software.
 
@@ -29,7 +29,7 @@ My first job out of college was working for an education startup called [Clever]
 
 Here's a picture of Clever's website where they describe a part of their API:
 
-![Clever API]()
+![Clever API](https://github.com/carlshan/intro_to_computer_programming/blob/master/Images/clever_api.png?raw=true)
 
 If you want to browse more, you can check out [Clever's API here](https://dev.clever.com/reference).
 
