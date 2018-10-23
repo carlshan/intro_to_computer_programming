@@ -19,7 +19,7 @@ For example, below is a set of instructions for parents.
 
 **Example: The "Parenting" API**
 
-![Parenting Manual](http://cdn.emgn.com/wp-content/uploads/2014/02/Funniest-Parenting-Instructions-Feature.jpg)
+![Parenting Manual](https://github.com/carlshan/intro_to_computer_programming/blob/master/Images/clever_api.png?raw=true)
 
 Like the examples above, many pieces of software also have examples of "Good" and correct ways of using that software.
 
@@ -57,7 +57,7 @@ Now let's learn how to use some APIs to do something nifty.
 
 By the end of this tutorial, you will know how to write a program that sends text messages to yourself 2 days before an assignment is due on Canvas.
 
-![Finished Product]()
+![Finished Product](https://github.com/carlshan/intro_to_computer_programming/blob/master/Images/api_example.png?raw=true)
 
 
 # Things you will learn:
