@@ -15,6 +15,12 @@ As a result of this, you'll have to use `pip3` instead of `pip` to install packa
 
 You can also run python scripts with Python3 by typing `python3 some_file.py` in Terminal instead of `python some_file.py`.
 
+You should now also upgrade `pip` to the latest version as well:
+
+`
+pip3 install --upgrade pip
+`
+
 
 # What are `API`s anyways?
 API stands for "Application Programming Interface". 
