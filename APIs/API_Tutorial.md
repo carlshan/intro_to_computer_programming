@@ -4,6 +4,18 @@ By Carl Shan of [The Nueva School](www.nuevaschool.org)
 
 In this tutorial you will learn what an API is, and also how to write programs that use the Canvas and Twilio API to send text messages to yourself when you have an assignment due.
 
+# First, install Python 3
+We're going to use Python3 instead of Python2 for this tutorial.
+
+That's because one of the Python libraries we're using requires Python3. 
+
+Visit www.python.org and download Python version 3.7 to your computer and run the installer.
+
+As a result of this, you'll have to use `pip3` instead of `pip` to install packages.
+
+You can also run python scripts with Python3 by typing `python3 some_file.py` in Terminal instead of `python some_file.py`.
+
+
 # What are `API`s anyways?
 API stands for "Application Programming Interface". 
 
@@ -104,7 +116,7 @@ We're going to combine all this together to write a short Python program that te
 
 **Installing the `twilio` library:** 
 
-FIrst, you're going to have to `pip install --user twilio` in Terminal.
+FIrst, you're going to have to `pip3 install --user twilio` in Terminal.
 
 Make sure you do that.
 
@@ -193,7 +205,7 @@ Now that we have successfully used Twilio's API to send a text message, we're go
 This part of the tutorial will walk you through the intro steps, although you will have to figure out the rest on your own.
 
 * First, you will also need to get a Canvas API key (this is your API password). Follow the [instructions here to get a key](https://community.canvaslms.com/docs/DOC-10806-4214724194).
-* Next, you will need the `canvasapi` Python library. Go into Terminal and `pip install --user canvasapi`.
+* Next, you will need the `canvasapi` Python library. Go into Terminal and `pip3 install --user canvasapi`.
 * Next, you will need to set up the following code:
 
 ```python
@@ -205,42 +217,111 @@ API_KEY = "YOUR API KEY HERE"
 canvas = Canvas(API_URL, API_KEY)
 ```
 
-Great, now you will need to figure out how to combine the two together.
+This will create a variable called `canvas` that represents the `Canvas` object that has all of the relevant functions you can use to complete the exercises.
+
+Now you will need to figure out how to combine the Twilio code and the Canvas code together.
 
 Below are exercises that help you figure out how to combine things.
 
 # Exercises: 
 
-1. Write some code that gets a list all of the assignments from a particular class.
+Do and turn in exercises 1 - 4.
 
-**HINT:** To do this you will need to learn how to use the `canvasapi` Python library that you installed. Specifically, you will need to use this link: [`canvasapi` examples](https://canvasapi.readthedocs.io/en/latest/examples.html). Scroll around and see if you can find something you'll use.
-
-2. After completing exercise 1, write code that finds the due date of each assignment. 
-
-**HINT:** Check to see if there's a function that's in the `canvasapi` library that helps you with this.
-
-**HINT:** Print the result of the `dir` function on an `assignment` (e.g., `print(dir(assignment))` after you've made a variable called `assignment` that stores one particular object to see all the available functions that you can use. There is something in here that is probably what you want.
-
-3. Write a program that texts you a few days ahead of time of an assignment being due using what you learned from above.
-
-**HINT:** You will need to learn about how to use the `datetime` module that's built into Python. (See here for a [starter tutorial](https://www.w3schools.com/python/python_datetime.asp), though you will probably need more than just this). 
-
-4. If you were able to complete steps 1-3, build some programs that can actually help you get work done. For example, maybe you could build something that texts you your schedule every day? Since many students rely on their Google Calendar, which has its own API in addition to a Python library. You can see how you can get started here: [Google Calendar API & Python Support](https://developers.google.com/calendar/quickstart/python).
+If you are done, try the Bonus Creative Challenge exercise.
 
 
-## Common Issues
+## Exercise 1. Write code that gets a particular class that you're enrolled it.
+
+To do this you will need to learn how to use the `canvasapi` Python library that you installed. Specifically, you will need to use this link: [`canvasapi` examples](https://canvasapi.readthedocs.io/en/latest/examples.html). Scroll around and see if you can find something you'll use.
+
+If you succeed, part of your code should look something like the following:
+
+```python
+canvas = Canvas(API_URL, API_KEY)
+
+course = ________________ # figure out what goes here
+
+```
+
+
+## Exercise 2. After completing exercise 1, write code that prints all the assignments in that class.
+
+You want to figure out how to get a list of all assignments from a particular class.
+
+Maybe there's soemthing that's in the `canvasapi` library that helps you with this?
+
+When you succeed, your code should look something like this:
+
+
+```python
+course = ________________ # figure out what goes here
+
+assignments = course._________________ # figure out what goes here
+
+for assignment in assignments:
+    print(assignment)
+
+```
+
+If your code is correct. The above should print something like the below:
+
+```
+Complete the intro survey (28547)
+Submit your personal website (29266)
+Submit an image and a Python file of your complex shape (29554)
+Turn in your lists assignment (29667)
+Turn in your Functions assignment (30131)
+Turn in your Dictionary assignment (30467)
+Turn in your midsemester project (30847)
+Turn in your API assignment (31586)
+```
+
+### Exercise 3: Getting the due dates for each assignment
+
+Now write some code that prints the due dates for each of the assignments.
+
+If correct, your code should look something like:
+
+```python
+for assignment in assignments:
+    due_date = assignment._______________ # figure out what goes here
+    print(due_date)
+```
+
+And the above should print something that looks like:
+
+```
+2018-09-06T06:00:00Z
+2018-09-13T05:00:00Z
+2018-09-19T05:00:00Z
+2018-09-29T05:00:59Z
+2018-10-06T05:00:59Z
+2018-10-24T05:00:59Z
+2018-11-06T07:59:59Z
+```
+
+**HINT:** If only there was a command in Python that would show you all of the attributes and functions you an use on an object ... turns out, there is! It's the `dir()` function. By passing an object as the input to the `dir()` function, it prints out all of the attributes and functions available for you to use.
+
+Print the result of the `dir` function on an `assignment` (e.g., `print(dir(assignment))` after you've made a variable called `assignment` that stores one particular object to see all the available functions that you can use. There is something in here that is probably what you want.
+
+### Exercise 4. Write a program that texts you a few days ahead of time of an assignment being due using what you learned from above.
+
+You will need to use your knowledge of the Twilio library and code to solve this problem.
+
+You will also need to learn about how to use the `datetime` module that's built into Python. (See here for a [starter tutorial](https://www.w3schools.com/python/python_datetime.asp), though you will probably need more than just this). 
+
+### Creative Challenge: Build something useful for you
+
+If you were able to complete steps 1-3, build some programs that can actually help you get work done. 
+
+For example, maybe you could build something that texts you your schedule every day? 
+
+Since many students rely on their Google Calendar, which has its own API in addition to a Python library. You can see how you can get started here: [Google Calendar API & Python Support](https://developers.google.com/calendar/quickstart/python).
+
+
+## Common Issues and Bugs
 
 Use this section to debug issues you're getting.
-
-## Before going any further
-Make sure you've installed Python3. 
-
-Visit www.python.org and download Python version 3.7 to your computer and run the installer.
-
-As a result of this, you'll have to use `pip3` instead of `pip` to install packages.
-
-You can also run python scripts with Python3 by typing `python3 some_file.py` in Terminal instead of `python some_file.py`.
-
 
 ### Issue: When I press `Command` + `I` in Atom to run my code, it says "No module named `canvasapi`" or "No module named `twilio`"
 
@@ -268,7 +349,7 @@ We need to reinstall the two libraries using `pip3` instead of `pip`. `pip3` is 
 
 As long as these don't error, you should be able to continue.
 
-### Issue: When using `pip` to install libraries, you get an error like `Errno 13] Permission denied /Users/cshan/Library/Python/3.7`
+### Issue: When using `pip` to install libraries, you get an error like `[Errno 13] Permission denied /Users/cshan/Library/Python/3.7`
 
 This is because the `root` user of your computer owns that folder and is the only user who can modify it, and the user you're logged into (e.g., `cshan` for me) isn't `root` and can't modify this folder.
 
