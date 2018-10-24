@@ -310,6 +310,25 @@ You will need to use your knowledge of the Twilio library and code to solve this
 
 You will also need to learn about how to use the `datetime` module that's built into Python. (See here for a [starter tutorial](https://www.w3schools.com/python/python_datetime.asp), though you will probably need more than just this). 
 
+If you're successful, your code should look something like the following:
+
+```python
+from twilio.rest import Client
+from canvasapi import Canvas
+import datetime
+
+# ... some code here ... #
+
+due_date = assignment.__________ # figure out what goes there
+today = datetime.datetime.now()
+
+days_until_due = (due_date - today).days
+
+if days_until_due == 2:
+    # ... use Twilio text yourself which assignment is due and in how many days... #
+```
+
+
 ### Creative Challenge: Build something useful for you
 
 If you were able to complete steps 1-3, build some programs that can actually help you get work done. 
