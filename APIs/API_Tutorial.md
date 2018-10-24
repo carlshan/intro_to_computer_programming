@@ -4,7 +4,32 @@ By Carl Shan of [The Nueva School](www.nuevaschool.org)
 
 In this tutorial you will learn what an API is, and also how to write programs that use the Canvas and Twilio API to send text messages to yourself when you have an assignment due.
 
-# First, install Python 3
+## What you will learn to do
+
+By the end of this tutorial, you will know how to write a program that sends text messages to yourself 2 days before an assignment is due on Canvas.
+
+![Finished Product](https://github.com/carlshan/intro_to_computer_programming/blob/master/Images/api_example.png?raw=true)
+
+## Things you will learn:
+
+1. **Twilio's API**: How to write Python code that uses an API made by a company called Twilio to send text messages.
+2. **Canvas API**: How to use the Canvas API to get the assignments for your class.
+3. **Using them together**: How to use them both to text you reminders about when assignments are due.
+
+
+## Table of Contents
+
+The tutorial is broken up into the following:
+
+1. [Installing Python3](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#first-install-python-3)
+2. [Intro to APIs](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#what-are-apis-anyways)
+3. [Step 1: Sign up for Twilio](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#step-1-sign-up-for-twilio)
+4. [Step 2: Make a Python Program](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#step-2-make-a-python-program)
+5. [Step 3: Using the Canvas API](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#step-3-using-canvas-api)
+6. [Exercises](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#exercises)
+7. [Common Issues and Bugs](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#common-issues-and-bugs)
+
+## First, install Python 3
 We're going to use Python3 instead of Python2 for this tutorial.
 
 That's because one of the Python libraries we're using requires Python3. 
@@ -21,8 +46,7 @@ You should now also upgrade `pip` to the latest version as well:
 pip3 install --upgrade pip
 `
 
-
-# What are `API`s anyways?
+## What are `API`s anyways?
 API stands for "Application Programming Interface". 
 
 "Uhhh ... that's not very helpfull. What does that mean?"
@@ -51,7 +75,7 @@ Here's a picture of Clever's website where they describe a part of their API:
 
 If you want to browse more, you can check out [Clever's API here](https://dev.clever.com/reference).
 
-## Wait, do I already use `API`s in my life?
+### Wait, do I already use `API`s in my life?
 
 "Well, that's interesting Carl. What's an example of an API in my life?"
 
@@ -70,20 +94,6 @@ Cool.
 So you have maybe a better idea of APIs.
 
 Now let's learn how to use some APIs to do something nifty.
-
-## What you will learn how to do
-
-By the end of this tutorial, you will know how to write a program that sends text messages to yourself 2 days before an assignment is due on Canvas.
-
-![Finished Product](https://github.com/carlshan/intro_to_computer_programming/blob/master/Images/api_example.png?raw=true)
-
-
-# Things you will learn:
-
-1. **Twilio's API**: How to write Python code that uses an API made by a company called Twilio to send text messages.
-2. **Canvas API**: How to use the Canvas API to get the assignments for your class.
-3. **Using them together**: How to use them both to text you reminders about when assignments are due.
-
 
 ## Step 1: Sign Up For Twilio
 
@@ -364,7 +374,7 @@ For example, maybe you could build something that texts you your schedule every 
 Since many students rely on their Google Calendar, which has its own API in addition to a Python library. You can see how you can get started here: [Google Calendar API & Python Support](https://developers.google.com/calendar/quickstart/python).
 
 
-# Common Issues and Bugs
+## Common Issues and Bugs
 
 Use this section to debug issues you're getting.
 
