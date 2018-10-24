@@ -207,14 +207,14 @@ You should receive a text message within a few seconds.
 
 Congrats, you just used the Twilio API!
 
-## No spamming
+### No spamming
 Don't write programs that spam people. Full stop.
 
 Fortunately Twilio also has some built-in safe measures against spamming.
 
 Something that's built into Twilio is that you can only send messages from the Twilio phone number, and only to phone numbers that are Verified Caller IDs on the Console. This way you can't spam people but you can use it yourself.
 
-# Step 3: Using Canvas' API
+## Step 3: Using Canvas' API
 
 Now that we have successfully used Twilio's API to send a text message, we're going to use the Canvas API to get a list of all of the assignments that are due.
 
@@ -239,14 +239,14 @@ Now you will need to figure out how to combine the Twilio code and the Canvas co
 
 Below are exercises that help you figure out how to combine things.
 
-# Exercises: 
+## Exercises: 
 
 Do and turn in exercises 1 through 4.
 
 If you are done, try the Bonus Creative Challenge exercise.
 
 
-## Exercise 1. Write code that gets a particular class that you're enrolled it.
+### Exercise 1. Write code that gets a particular class that you're enrolled it.
 
 To do this you will need to learn how to use the `canvasapi` Python library that you installed. Specifically, you will need to use this link: [`canvasapi` examples](https://canvasapi.readthedocs.io/en/latest/examples.html). Scroll around and see if you can find something you'll use.
 
@@ -260,7 +260,7 @@ course = canvas.___________ # figure out what goes here
 ```
 
 
-## Exercise 2. After completing exercise 1, write code that prints all the assignments in that class.
+### Exercise 2. After completing exercise 1, write code that prints all the assignments in that class.
 
 You want to figure out how to get a list of all assignments from a particular class.
 
@@ -294,7 +294,7 @@ Turn in your midsemester project (30847)
 Turn in your API assignment (31586)
 ```
 
-## Exercise 3: Getting the due dates for each assignment
+### Exercise 3: Getting the due dates for each assignment
 
 Now write some code that prints the due dates for each of the assignments.
 
@@ -336,11 +336,11 @@ The above should print a giant list of attributes, many of which begin and end w
 
 Instead, look for something in that list that has to do with a due date.
 
-## Exercise 4. Write a program that texts you a few days ahead of time of an assignment being due using what you learned from above.
+### Exercise 4. Write a program that texts you a few days ahead of time of an assignment being due using what you learned from above.
 
 You will need to use your knowledge of the Twilio library and code to solve this problem.
 
-### Important: Installing the `arrow` module
+#### Important: Installing the `arrow` module
 
 To help you out with this exercise, you should also `pip3 install --user arrow` to deal with checking dates and times. `arrow` is a Python module that will help you a good bit. 
 
