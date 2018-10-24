@@ -231,7 +231,7 @@ Below are exercises that help you figure out how to combine things.
 
 # Exercises: 
 
-Do and turn in exercises 1 - 4.
+Do and turn in exercises 1 through 4.
 
 If you are done, try the Bonus Creative Challenge exercise.
 
@@ -245,7 +245,7 @@ If you succeed, part of your code should look something like the following:
 ```python
 canvas = Canvas(API_URL, API_KEY)
 
-course = ________________ # figure out what goes here
+course = canvas.___________ # figure out what goes here
 
 ```
 
@@ -255,6 +255,8 @@ course = ________________ # figure out what goes here
 You want to figure out how to get a list of all assignments from a particular class.
 
 Maybe there's soemthing that's in the `canvasapi` library that helps you with this?
+
+Look through the [`canvasapi` examples](https://canvasapi.readthedocs.io/en/latest/examples.html) and see if there's something that might help.
 
 When you succeed, your code should look something like this:
 
@@ -282,7 +284,7 @@ Turn in your midsemester project (30847)
 Turn in your API assignment (31586)
 ```
 
-### Exercise 3: Getting the due dates for each assignment
+## Exercise 3: Getting the due dates for each assignment
 
 Now write some code that prints the due dates for each of the assignments.
 
@@ -306,27 +308,45 @@ And the above should print something that looks like:
 2018-11-06T07:59:59Z
 ```
 
+Note that all of the above are `strings`, not integers or any other data type.
+
 **HINT:** If only there was a command in Python that would show you all of the attributes and functions you an use on an object ... turns out, there is! It's the `dir()` function. By passing an object as the input to the `dir()` function, it prints out all of the attributes and functions available for you to use.
 
-Print the result of the `dir` function on an `assignment` (e.g., `print(dir(assignment))` after you've made a variable called `assignment` that stores one particular object to see all the available functions that you can use. There is something in here that is probably what you want.
+For example, you can do something like:
 
-### Exercise 4. Write a program that texts you a few days ahead of time of an assignment being due using what you learned from above.
+```python
+assignments = course.__________ # figure out what goes here
+
+first_assignment = assignments[0]
+
+print(dir(first_assignment))
+```
+
+The above should print a giant list of attributes, many of which begin and end with two underscores `'__'`, such as `'__class__'` or `'__delattr__'`. Ignore these attributes.
+
+Instead, look for something in that list that has to do with a due date.
+
+## Exercise 4. Write a program that texts you a few days ahead of time of an assignment being due using what you learned from above.
 
 You will need to use your knowledge of the Twilio library and code to solve this problem.
 
-You will also need to learn about how to use the `datetime` module that's built into Python. (See here for a [starter tutorial](https://www.w3schools.com/python/python_datetime.asp), though you will probably need more than just this). 
+### Important: Installing the `arrow` module
 
-If you're successful, your code should look something like the following:
+To help you out with this exercise, you should also `pip3 install --user arrow` to deal with checking dates and times. `arrow` is a Python module that will help you a good bit. 
+
+You can read the [official documentation on the Arrow module here](https://arrow.readthedocs.io/en/latest/).
+
+If you're successful in this exercise, your code should look something like the following:
 
 ```python
 from twilio.rest import Client
 from canvasapi import Canvas
-import datetime
+import arrow
 
 # ... some code here ... #
 
 due_date = assignment.__________ # figure out what goes there
-today = datetime.datetime.now()
+today = arrow.utcnow()
 
 days_until_due = (due_date - today).days
 
@@ -335,7 +355,7 @@ if days_until_due == 2:
 ```
 
 
-### Creative Challenge: Build something useful for you
+## Creative Challenge: Build something useful for you
 
 If you were able to complete steps 1-3, build some programs that can actually help you get work done. 
 
@@ -344,7 +364,7 @@ For example, maybe you could build something that texts you your schedule every 
 Since many students rely on their Google Calendar, which has its own API in addition to a Python library. You can see how you can get started here: [Google Calendar API & Python Support](https://developers.google.com/calendar/quickstart/python).
 
 
-## Common Issues and Bugs
+# Common Issues and Bugs
 
 Use this section to debug issues you're getting.
 
