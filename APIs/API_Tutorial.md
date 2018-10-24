@@ -207,17 +207,19 @@ canvas = Canvas(API_URL, API_KEY)
 
 Great, now you will need to figure out how to combine the two together.
 
-Here's what you have to do:
+Below are exercises that help you figure out how to combine things.
 
 # Exercises: 
 
-1. Write some code that gets all of the assignments from a particular class.
+1. Write some code that gets a list all of the assignments from a particular class.
 
-**HINT:** To do this you will need to learn how to use the `canvasapi` Python library that you installed. Specifically, you will need to use this link: [`canvasapi` documentation](https://canvasapi.readthedocs.io/en/latest/)
+**HINT:** To do this you will need to learn how to use the `canvasapi` Python library that you installed. Specifically, you will need to use this link: [`canvasapi` examples](https://canvasapi.readthedocs.io/en/latest/examples.html). Scroll around and see if you can find something you'll use.
 
-2. Write code that finds the due date of each assignment. 
+2. After completing exercise 1, write code that finds the due date of each assignment. 
 
 **HINT:** Check to see if there's a function that's in the `canvasapi` library that helps you with this.
+
+**HINT:** Print the result of the `dir` function on an `assignment` (e.g., `print(dir(assignment))` after you've made a variable called `assignment` that stores one particular object to see all the available functions that you can use. There is something in here that is probably what you want.
 
 3. Write a program that texts you a few days ahead of time of an assignment being due using what you learned from above.
 
@@ -226,4 +228,70 @@ Here's what you have to do:
 4. If you were able to complete steps 1-3, build some programs that can actually help you get work done. For example, maybe you could build something that texts you your schedule every day? Since many students rely on their Google Calendar, which has its own API in addition to a Python library. You can see how you can get started here: [Google Calendar API & Python Support](https://developers.google.com/calendar/quickstart/python).
 
 
+## Common Issues
+
+Use this section to debug issues you're getting.
+
+## Before going any further
+Make sure you've installed Python3. 
+
+Visit www.python.org and download Python version 3.7 to your computer and run the installer.
+
+As a result of this, you'll have to use `pip3` instead of `pip` to install packages.
+
+You can also run python scripts with Python3 by typing `python3 some_file.py` in Terminal instead of `python some_file.py`.
+
+
+### Issue: When I press `Command` + `I` in Atom to run my code, it says "No module named `canvasapi`" or "No module named `twilio`"
+
+This is happening because the Script addon in Atom is running your program using Python2 instead of Python3. 
+
+You are going to change the script addon to use Python3.
+
+In Atom, click on `Packages` > `Script` > `Configure Script`
+
+And in the `Command` box, type `python3`.
+
+Now press the `Run` button and your script should run with Python3 instead of Python2.
+
+### Issue: No module named `twilio` or No module named `canvasapi`
+
+This likely happened because, after you downloaded Python 3 from [Python.org](www.python.org), you didn't reinstall the `twilio` and `canvasapi` libraries using `pip3`.
+
+**Solution:** 
+
+We need to reinstall the two libraries using `pip3` instead of `pip`. `pip3` is for Python3.
+
+`pip3 install canvasapi`
+
+`pip3 install twilio`
+
+As long as these don't error, you should be able to continue.
+
+### Issue: When using `pip` to install libraries, you get an error like `Errno 13] Permission denied /Users/cshan/Library/Python/3.7`
+
+This is because the `root` user of your computer owns that folder and is the only user who can modify it, and the user you're logged into (e.g., `cshan` for me) isn't `root` and can't modify this folder.
+
+**Solution:**
+We're going to enable your user to modify these files.
+
+In Terminal type:
+
+`sudo chown -R $USER <<COPY YOUR PATH HERE TO THE 3.7 FOLDER>`
+
+Where you replace the `<< ... >>` with the actual path to your Python 3.7 folder.
+
+For example:
+
+`sudo chown -R $USER /Users/<<your Terminal username here>>/Library/Python/3.7`
+
+And replace `<<your Terminal username here>>` with your actual Terminal username. 
+
+(**NOTE:** You can find out your username by typing `echo $USER` in Terminal.)
+
+In the end, the command should look something like like:
+
+`sudo chown -R $USER /Users/cshan/Library/Python/3.7`
+
+Now if this runs correctly you should be able to `pip` install correctly without any issues.
 
