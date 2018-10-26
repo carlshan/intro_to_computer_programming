@@ -376,11 +376,17 @@ for assignment in assignments:
 
 **NOTE:** Once you succesfully complete this Exercise, try to improve the program above. For example, the code above only checks for assignments in one class. How can you find all your classes, and find assignments for all classes?
 
-## Creative Challenge: Build something useful for you
+## Optional Creative Challenge: Build something useful for you
 
 If you were able to complete Exercisees 1-4, you now have the skills build some programs that can actually help remind you of what you need to get done.
 
 For example, maybe you could build something that texts you your schedule every day? 
+
+Or maybe you can text yourself every time your teacher adds a comment on a Canvas assignment.
+
+Or maybe you can get a text any time a new assignment gets added by a teacher?
+
+**Optional Idea:** Learn the Google Calendar API
 
 Since many students rely on their Google Calendar, which has its own API in addition to a Python library. You can see how you can get started here: [Google Calendar API & Python Support](https://developers.google.com/calendar/quickstart/python).
 
@@ -401,6 +407,8 @@ Use this section to debug issues you're getting.
 
 ### Issue: I am getting a `TypeError` in Exercise 4 
 
+**Why is this happening?**
+
 Check your error. You are probably getting a `TypeError` in the line of code: `days_until_due = (due_date - today).days`.
 
 A `TypeError` occurs when you are trying to perform an operation on a piece of data that doesn't support that operation.
@@ -410,6 +418,8 @@ For example, you cannot add `+` a `str` and an `int` in Python. E.g., `'hello' +
 A similar thing is happening here.
 
 You are trying to subtract with the `-` operator between two things, and at least one of those things do not support subtraction.
+
+**Is that really what's happening?**
 
 You can use the built-in `type()` function in Python to check what `type` a certain variable is.
 
@@ -422,6 +432,8 @@ Your `due_date` is likely a type `str`.
 So you're trying to subtract something of type `arrow.arrow.Arrow` (e.g., something that represents time) from a `str`.
 
 That doesn't work.
+
+**The solution:**
 
 You'll have to convert the `str` into something that also represents time.
 
@@ -444,7 +456,11 @@ As a result, this will fix your error.
 
 ### Issue: When I press `Command` + `I` in Atom to run my code, it says "No module named `canvasapi`" or "No module named `twilio`"
 
+**Why is this happening?**
+
 This is happening because the Script addon in Atom is running your program using Python2 instead of Python3. 
+
+**The solution:**
 
 You are going to change the script addon to use Python3.
 
@@ -456,9 +472,11 @@ Now press the `Run` button and your script should run with Python3 instead of Py
 
 ### Issue: No module named `twilio` or No module named `canvasapi`
 
+**Why is this happening?**
+
 This likely happened because, after you downloaded Python 3 from [Python.org](www.python.org), you didn't reinstall the `twilio` and `canvasapi` libraries using `pip3`.
 
-**Solution:** 
+**The solution:** 
 
 We need to reinstall the two libraries using `pip3` instead of `pip`. `pip3` is for Python3.
 
@@ -470,9 +488,11 @@ As long as these don't error, you should be able to continue.
 
 ### Issue: When using `pip` to install libraries, you get an error like `[Errno 13] Permission denied /Users/cshan/Library/Python/3.7`
 
+**Why is this happening?**
+
 This is because the `root` user of your computer owns that folder and is the only user who can modify it, and the user you're logged into (e.g., `cshan` for me) isn't `root` and can't modify this folder.
 
-**Solution:**
+**The solution:**
 We're going to enable your user to modify these files.
 
 In Terminal type:
