@@ -391,7 +391,7 @@ Here are some common issues you may get, and how to resolve each one:
 
 ### List of Issues:
 
-1. [I am getting a `TypeError` in Exercise 4.](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-i-am-getting-a-typerror-in-exercise-4)
+1. [I am getting a `TypeError` in Exercise 4](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-i-am-getting-a-typeerror-in-exercise-4)
 2. [Running code in Atom says 'no module named `canvasapi` or 'no module named `twilio`](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-when-i-press-command--i-in-atom-to-run-my-code-it-says-no-module-named-canvasapi-or-no-module-named-twilio)
 3. [I still get a "No module named `canvasapi` or "No module named `twilio` error](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-no-module-named-twilio-or-no-module-named-canvasapi)
 4. [I can't `pip3 install ...` any of the libraries.](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-when-using-pip-to-install-libraries-you-get-an-error-like-errno-13-permission-denied-userscshanlibrarypython37)
