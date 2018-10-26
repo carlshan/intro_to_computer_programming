@@ -194,7 +194,7 @@ Add the code to bottom of your program.
 ```python
 text = "You are awesome."
 twilio_num = "YOUR TWILIO PHONE NUMBER HERE" # e.g., '+16696002352'
-my_phone = "YOUR ACUTAL PHONE NUMBER HERE" # e.g., '+14081234567'
+my_phone = "YOUR ACTUAL PHONE NUMBER HERE" # e.g., '+14081234567'
 
 message = client.messages.create(body=text, from_=twilio_num, to=my_phone)
 ```
@@ -248,6 +248,10 @@ If you are done, try the Bonus Creative Challenge exercise.
 
 ### Exercise 1. Write code that gets a particular class that you're enrolled it.
 
+We're going to write a program that texts us when assignments are due.
+
+The first step is to get a list of assignments from a class, but to do that, we need to learn how to get a single class.
+
 To do this you will need to learn how to use the `canvasapi` Python library that you installed. Specifically, you will need to use this link: [`canvasapi` examples](https://canvasapi.readthedocs.io/en/latest/examples.html). Scroll around and see if you can find something you'll use.
 
 If you succeed, part of your code should look something like the following:
@@ -259,6 +263,7 @@ course = canvas.___________ # figure out what goes here
 
 ```
 
+**HINT:** A class' `courseid` is a number that is in the URL when you visit that page in Canvas.
 
 ### Exercise 2. After completing exercise 1, write code that prints all the assignments in that class.
 
@@ -266,13 +271,13 @@ You want to figure out how to get a list of all assignments from a particular cl
 
 Maybe there's soemthing that's in the `canvasapi` library that helps you with this?
 
-Look through the [`canvasapi` examples](https://canvasapi.readthedocs.io/en/latest/examples.html) and see if there's something that might help.
+Look through the [`canvasapi`  Python examples](https://canvasapi.readthedocs.io/en/latest/examples.html) and see if there's something that might help.
 
 When you succeed, your code should look something like this:
 
 
 ```python
-course = ________________ # figure out what goes here
+course = ________________ # you should've figured this out in Exercise 1
 
 assignments = course._________________ # figure out what goes here
 
@@ -317,15 +322,14 @@ And the above should print something that looks like:
 2018-10-24T05:00:59Z
 2018-11-06T07:59:59Z
 ```
+If you are not sure how to get the due date of each assignment, read the hint below.
 
-Note that all of the above are `strings`, not integers or any other data type.
-
-**HINT:** If only there was a command in Python that would show you all of the attributes and functions you an use on an object ... turns out, there is! It's the `dir()` function. By passing an object as the input to the `dir()` function, it prints out all of the attributes and functions available for you to use.
+**HINT:** There is a command in Python that would show you all of the attributes and functions you an use on an object. It's the `dir()` function. By passing an object as the input to the `dir()` function, it prints out all of the attributes and functions available for you to use.
 
 For example, you can do something like:
 
 ```python
-assignments = course.__________ # figure out what goes here
+assignments = course.__________ # you should've figured this out in Exercise 2
 
 first_assignment = assignments[0]
 
@@ -353,21 +357,28 @@ from twilio.rest import Client
 from canvasapi import Canvas
 import arrow
 
-# ... some code here ... #
+# ...Twilio setup code here ... #
 
-due_date = assignment.__________ # figure out what goes there
 today = arrow.utcnow()
 
-days_until_due = (due_date - today).days
+for assignment in assignments:
+    due_date = assignment.__________ # you should've figured out what goes here in Exercise 3
 
-if days_until_due == 2:
-    # ... use Twilio text yourself which assignment is due and in how many days... #
+    days_until_due = (due_date - today).days
+
+    if days_until_due <= 7:
+        # ... use Twilio text yourself which assignment is due and in how many days... #
 ```
 
+**HINT:** If you are getting a `TypeError` when running this code, see the [Common Issues and Bugs section](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#common-issues-and-bugs) below where I list common bugs and how to resolve them.
+
+**NOTE:** If you don't have an assignment that is due within 7 days, change the code above to check for assignments due in the next 2 weeks, just to ensure it works.
+
+**NOTE:** Once you succesfully complete this Exercise, try to improve the program above. For example, the code above only checks for assignments in one class. How can you find all your classes, and find assignments for all classes?
 
 ## Creative Challenge: Build something useful for you
 
-If you were able to complete steps 1-3, build some programs that can actually help you get work done. 
+If you were able to complete Exercisees 1-4, you now have the skills build some programs that can actually help remind you of what you need to get done.
 
 For example, maybe you could build something that texts you your schedule every day? 
 
@@ -376,7 +387,60 @@ Since many students rely on their Google Calendar, which has its own API in addi
 
 ## Common Issues and Bugs
 
+Here are some common issues you may get, and how to resolve each one:
+
+### List of Issues:
+
+1. [I am getting a `TypeError` in Exercise 4.](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-i-am-getting-a-typerror-in-exercise-4)
+2. [Running code in Atom says 'no module named `canvasapi` or 'no module named `twilio`](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-when-i-press-command--i-in-atom-to-run-my-code-it-says-no-module-named-canvasapi-or-no-module-named-twilio)
+3. [I still get a "No module named `canvasapi` or "No module named `twilio` error](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-no-module-named-twilio-or-no-module-named-canvasapi)
+4. [I can't `pip3 install ...` any of the libraries.](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-when-using-pip-to-install-libraries-you-get-an-error-like-errno-13-permission-denied-userscshanlibrarypython37)
+
 Use this section to debug issues you're getting.
+
+
+### Issue: I am getting a `TypeError` in Exercise 4 
+
+Check your error. You are probably getting a `TypeError` in the line of code: `days_until_due = (due_date - today).days`.
+
+A `TypeError` occurs when you are trying to perform an operation on a piece of data that doesn't support that operation.
+
+For example, you cannot add `+` a `str` and an `int` in Python. E.g., `'hello' + 123` will raise an `TypeError` because you can't add words to numbers.
+
+A similar thing is happening here.
+
+You are trying to subtract with the `-` operator between two things, and at least one of those things do not support subtraction.
+
+You can use the built-in `type()` function in Python to check what `type` a certain variable is.
+
+Try using the `type()` function on the `today` variable and the `due_date` variable. 
+
+The `today` variable should be of type `arrow.arrow.Arrow`. The `arrow` module in Python allows us to represent time. The `arrow.arrow.Arrow` type is a bit like an object that represents a concept of time. If this seems weird and complicated, ignore it for now. Just know that it's of this type.
+
+Your `due_date` is likely a type `str`. 
+
+So you're trying to subtract something of type `arrow.arrow.Arrow` (e.g., something that represents time) from a `str`.
+
+That doesn't work.
+
+You'll have to convert the `str` into something that also represents time.
+
+The people behind `canvasapi` did this for you:
+
+```python
+# Instead of the below ...
+due_date = assignment.due_at
+
+# ... use this instead
+due_date = assignment.due_at_date
+```
+
+`.due_at` returns a `str`.
+
+`.due_at_date` returns a `datetime` object that represents time as well.
+
+As a result, this will fix your error.
+
 
 ### Issue: When I press `Command` + `I` in Atom to run my code, it says "No module named `canvasapi`" or "No module named `twilio`"
 
