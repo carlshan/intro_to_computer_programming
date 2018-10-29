@@ -366,13 +366,13 @@ for assignment in assignments:
 
     days_until_due = (due_date - today).days
 
-    if days_until_due <= 7:
+    if 0 < days_until_due <= 7: # I added the `0 <` because technically some assignments are "overdue" and have negative `days_until_due`.
         # ... use Twilio text yourself which assignment is due and in how many days... #
 ```
 
 **HINT:** If you are getting a `TypeError` when running this code, see the [Common Issues and Bugs section](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#common-issues-and-bugs) below where I list common bugs and how to resolve them.
 
-**NOTE:** If you don't have an assignment that is due within 7 days, change the code above to check for assignments due in the next 2 weeks, just to ensure it works.
+**NOTE:** If you don't have an assignment that is due within the next few days days, change the code above to check for assignments due in the next 2 weeks, just to ensure it works.
 
 **NOTE:** Once you succesfully complete this Exercise, try to improve the program above. For example, the code above only checks for assignments in one class. How can you find all your classes, and find assignments for all classes?
 
@@ -380,15 +380,15 @@ for assignment in assignments:
 
 If you were able to complete Exercisees 1-4, you now have the skills build some programs that can actually help remind you of what you need to get done.
 
-For example, maybe you could build something that texts you your schedule every day? 
+For example, maybe you could build something that texts you your schedule every day?
+
+Or texts and messages your fellow advisees when its their turn on snack duty?
 
 Or maybe you can text yourself every time your teacher adds a comment on a Canvas assignment.
 
+Or how about something that texts you a nofication that an assignment is overdue, but you still haven't turned anything in yet?
+
 Or maybe you can get a text any time a new assignment gets added by a teacher?
-
-**Optional Idea:** Learn the Google Calendar API
-
-Since many students rely on their Google Calendar, which has its own API in addition to a Python library. You can see how you can get started here: [Google Calendar API & Python Support](https://developers.google.com/calendar/quickstart/python).
 
 
 ## Common Issues and Bugs
@@ -398,8 +398,8 @@ Here are some common issues you may get, and how to resolve each one:
 ### List of Issues:
 
 1. [I am getting a `TypeError` in Exercise 4](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-i-am-getting-a-typeerror-in-exercise-4)
-2. [Running code in Atom says 'no module named `canvasapi` or 'no module named `twilio`](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-when-i-press-command--i-in-atom-to-run-my-code-it-says-no-module-named-canvasapi-or-no-module-named-twilio)
-3. [I still get a "No module named `canvasapi` or "No module named `twilio` error](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-no-module-named-twilio-or-no-module-named-canvasapi)
+2. [Running code in Atom says 'no module named `canvasapi` or 'no module named `twilio.rest`](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-when-i-press-command--i-in-atom-to-run-my-code-it-says-no-module-named-canvasapi-or-no-module-named-twilio)
+3. [I still get a "No module named `canvasapi` or "No module named `twilio.rest` error](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-no-module-named-twilio-or-no-module-named-canvasapi)
 4. [I can't `pip3 install ...` any of the libraries.](https://github.com/carlshan/intro_to_computer_programming/blob/master/APIs/API_Tutorial.md#issue-when-using-pip-to-install-libraries-you-get-an-error-like-errno-13-permission-denied-userscshanlibrarypython37)
 
 Use this section to debug issues you're getting.
