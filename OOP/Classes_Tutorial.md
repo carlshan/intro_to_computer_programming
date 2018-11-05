@@ -228,7 +228,7 @@ print(a_card.suit)
 print(a_card.rank)
 # prints 'Ace'
 ```
-**Carl. I'm gonna be honest with you. I still don't understand everything. And thid was a lot of content. Couldn't you, like, gimme a  a summary or something?**
+**Carl. I'm gonna be honest with you. I still don't understand everything. And this was a lot of content. Couldn't you, like, gimme a  a summary or something?**
 
 *Sigh.* Alright your Majesty. One summary coming up.
 
@@ -318,8 +318,8 @@ When you type `self.rank` and `self.suit`, those two variables basically mean *"
 Here. Try this:
 
 ```python
-card1 = Card(s='Clubs', rank='Two')
-card2 = Card(s='Spades', rank='Three')
+card1 = Card(s='Clubs', r='Two')
+card2 = Card(s='Spades', r='Three')
 
 print(card1.get_value())
 
