@@ -20,8 +20,8 @@ class Monster(object):
         self.name = name
     
     def speak(self):
-        print("My name is " + self.name)
-        return None
+        intro = "My name is " + self.name
+        return intro
 ```
 
 Okay. What the heck is going on here?
@@ -200,7 +200,7 @@ This creates an important function that all classes need to have called the `__i
 **What about the next few lines of code?**
 
 ```python
-def __init(self, s, r):
+def __init__(self, s, r):
     self.suit = s
     self.rank = r
 ```
