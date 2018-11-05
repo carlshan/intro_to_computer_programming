@@ -376,7 +376,7 @@ Make sure to raise your hand and ask questions when you need to! These are not a
 
 ### Standard
 
-Just complete and turn in the exercises for `Part 1` and `Part 2`. 
+Complete and turn in the exercises for `Part 1` and `Part 2`. 
 
 ### Intermediate
 
