@@ -366,7 +366,7 @@ Define a class called `Deck`. It should have the following:
 
 1. An attribute called `.cards` which is a list that contains all 52 possible poker cards (e.g., `Ace of Spades` and `Jack of Hearts`) 
     * **HINT:** Use a few for-loops to generate all these cards. Don't type them all out by hand.
-2. A method called `draw_card()` that returns the last item in `self.cards`.
+2. A method called `draw_card()` that returns the last item in `self.cards`. This is similar to drawing the top card from a deck.
 3. A method called `shuffle` that randomly shuffles `self.cards`
     * **HINT:** Take a look at the `random` module in Python and see how it can help you randomly change the order of items in a list.
 
@@ -390,11 +390,11 @@ Then, using the `Card` and `Deck` class, create a simulation of one of the follo
 
 
 > Two cards are dealt from a deck. 
-
+>
 > Then a third card is dealt. 
-
+>
 > If the third card is between the first two cards, then the player wins. 
-
+>
 > If the third card is equal to either of the first two cards, or is outside of the set, then the player loses.
 
 **Option 2:** Larger Number (2 players)
