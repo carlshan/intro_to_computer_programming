@@ -57,7 +57,7 @@ We're going to program a simple card game, but to do that we need some way of re
 
 In your programming journey thus far, you've used things like `lists`, `dictionaries`, `int`s, `str`s and other *data structures.*
 
-`classes` allow us to define *our own data structures and objects*
+`classes` allow us to define *our own data structures and objects.*
 
 **Whaddya mean?**
 
@@ -79,7 +79,6 @@ There.
 We just defined a `class` called `Card` and it is going to be of type `object`.
 
 This is the general syntax for making a class:
-
 
 ```python
 class SOME_CLASS_NAME_HERE(object):
@@ -121,7 +120,6 @@ Now if you'll just try and --
 **Woah, woah woah Carl! Slow down. How does this code do that?**
 
 Okay fine. Let's break it down line by line.
-
 
 ```
 def __init__(self, s, r):
@@ -353,10 +351,12 @@ Since I knew that this function was going to print the value of the card, it nee
 
 **Another summary please!**
 
+Coming right up.
+
 ## Summary of Part 2
 
-* Classes don't just have attributes. They can have functions that we can methods.
-* Methods are defined just like regular functions (e.g., `def some_function()`)
+* Classes don't just have attributes. They can have functions that we call *methods*.
+* Methods are defined just like regular functions (e.g., `def some_function()`), except they're defined within the class.
 * Methods can access the `self` variable to get the specific value for different instances.
 * If you are writing a method that needs to access specific attributes of different instances, make sure to take the `self` argument as input and use it in the function (e.g., the `get_value()` method above).
 
@@ -367,8 +367,7 @@ Define a class called `Deck`. It should have the following:
 1. An attribute called `.cards` which is a list that contains all 52 possible poker cards (e.g., `Ace of Spades` and `Jack of Hearts`) 
     * **HINT:** Use a few for-loops to generate all these cards. Don't type them all out by hand.
 2. A method called `draw_card()` that returns the last item in `self.cards`.
-3. A method called `add_card()` that appends a card to `self.cards`.
-4. A method called `shuffle` that randomly shuffles `self.cards`
+3. A method called `shuffle` that randomly shuffles `self.cards`
     * **HINT:** Take a look at the `random` module in Python and see how it can help you randomly change the order of items in a list.
 
 Make sure to raise your hand and ask questions when you need to! These are not always easy.
@@ -381,21 +380,62 @@ Just complete and turn in the exercises for `Part 1` and `Part 2`.
 
 ### Intermediate
 
-Finish the exercises in `Part 1` and `Part 2`
+Finish the exercises in `Part 1` and `Part 2`.
 
-Then, using the `Card` and `Deck` class, create a simulation of the game `Blackjack` (AKA 21). If you are unfamiliar with this game, you can watch this [5 minute video explaining the game](https://www.youtube.com/watch?v=-9YGKFdP6sY).
+Then, using the `Card` and `Deck` class, create a simulation of one of the following simple card games:
 
-Or you can recreate another game. Make sure you let me know what you are thinking before you start, so I can let you know if it may be too ambitious.
+**Option 1:** In-Between (1 player)
 
+*The rules of this game go as follows:*
+
+
+> Two cards are dealt from a deck. 
+
+> Then a third card is dealt. 
+
+> If the third card is between the first two cards, then the player wins. 
+
+> If the third card is equal to either of the first two cards, or is outside of the set, then the player loses.
+
+**Option 2:** Larger Number (2 players)
+
+*The rules of this game are as follows:*
+
+> Players take turns playing rounds of this game. The first player to win 4 rounds, wins the game.
+> 
+> **Each round occurs in the following manner:**
+> 
+> During one round both players take turns drawing as many cards as they'd like from the deck.
+> 
+> The goal is to get the highest point total (`"Ace", "King", "Queen"`, and `"Jack"` are all worth 10 points). 
+> 
+> Both players will take turns to draw as many cards as they'd like.
+> 
+> At the end of the round, players compare their points. Whichever player has more points wins.
+> 
+> However, if any player draws two cards with the same suit OR rank, they automatically lose. This is called a "bust".
+> 
+> * For example if you drew `["Ace of Spades", "Three of Clubs", "Three of Hearts"]` you automatically lose, no matter what your opponent drew because there are two `"Three"`s.
+> 
+> If both players ended up with hands where they "bust", they replay the round.
+> 
+> The first player to win 4 rounds, wins the game.
+ 
 ### Advanced
 
-Create as close to a simulation of the game of Texas 'Hold Em, or another variant of Poker that you would like.
+**Option 1:** Create as close to a simulation of the game of `Blackjack` (AKA 21). 
 
-You don't have to implement any betting in the game.
+If you are unfamiliar with this game, you can watch this [5 minute video explaining the game](https://www.youtube.com/watch?v=-9YGKFdP6sY).
+
+**Option 2:** You can also try to implement Texas 'Hold Em, or another variant of Poker that you would like.
+
+You don't have to implement any betting in these game.
 
 However I should be able to play a round in your game (e.g., I should be able to draw a hand, and compare my hand to yours. Whichever one is higher "wins" the round.)
 
-To do this you will need to write code that checks for which hand is higher.
+To do this you will need to write code that checks for which hand is "higher".
 
 You can see a full list of Poker hands from highest to lowest on this [webpage](https://www.pokerstars.com/poker/games/rules/?no_redirect=1).
+
+**Option 3:** Or you can recreate another card game. Make sure you let me know what you are thinking before you start, so we can check in about it.
 
