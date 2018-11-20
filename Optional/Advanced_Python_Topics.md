@@ -7,7 +7,7 @@ Here are a few advanced programming topics in Python and exercises associated wi
 
 Pick one topic to focus on and turn in the exercises associated with the topic.
  
-## List Comprehensions 
+## Topic 1: List Comprehensions 
 
 List compehensions are a way to combine a for-loop and making a list at the same time.
 
@@ -16,7 +16,7 @@ Follow the link to learn about [List Comprehension Expressions](https://www.prog
 ### Exercises
 Visit the [Lists Exercises](https://github.com/carlshan/intro_to_computer_programming/blob/master/Lists/List_Exercises.md) link and solve at least two of the problems using a list comprehension.
 
-## Exception Handling with `try` and `except`
+## Topic 2: Exception Handling with `try` and `except`
 
 No one likes getting bugs in their code. I'm sure you all haven't either.
 
@@ -66,7 +66,7 @@ else:
 2. Learn how to raise an exception using [this tutorial](https://realpython.com/python-exceptions/) and write a `try-except` block where you manually `raise` an Exception in the `try` block and then handle it without crashing in the `except` block.
 
 
-## `lambda` and `map` and `filter`
+## Topic 3: `lambda` and `map` and `filter`
 
 **A new way of defining a function: anonymously.**
 
