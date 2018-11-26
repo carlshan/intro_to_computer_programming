@@ -3,7 +3,7 @@ By Carl Shan
 
 ## Introduction
 
-Here are a few advanced programming topics in Python and exercises associated with them.
+Here are a few advanced programming topics in Python and exercises associated with them.    
  
 ## Topic 1: List Comprehensions 
 
@@ -12,7 +12,7 @@ List compehensions are a way to combine a for-loop and making a list at the same
 Follow the link to learn about [List Comprehension Expressions](https://www.programiz.com/python-programming/list-comprehension). 
 
 ### Exercises
-Visit the [Lists Exercises](https://github.com/carlshan/intro_to_computer_programming/blob/master/Lists/List_Exercises.md) link and solve at least two of the problems using a list comprehension.
+Visit the [Lists Exercises](https://github.com/carlshan/intro_to_computer_programming/blob/master/Lists/List_Exercises.md) link and solve Intermediate #2, Advanced #1 and Advanced #2 using a list comprehension.
 
 ## Topic 2: Exception Handling with `try` and `except`
 
