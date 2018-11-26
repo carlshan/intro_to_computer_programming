@@ -4,8 +4,6 @@ By Carl Shan
 ## Introduction
 
 Here are a few advanced programming topics in Python and exercises associated with them.
-
-Pick one topic to focus on and turn in the exercises associated with the topic.
  
 ## Topic 1: List Comprehensions 
 
