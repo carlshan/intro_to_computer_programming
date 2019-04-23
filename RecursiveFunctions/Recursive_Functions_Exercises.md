@@ -48,32 +48,8 @@ recursive_sum([1, 2, 5, 9])
 
 ## Advanced
 
-1. Define a recursive function called `flatten` that takes in a list, flattens the list and returns the flattened version as a new list.
 
->**NOTE**: To flatten a list means to take a list of lists (of lists, of lists ...) and put them all in one list.
-
-Example:
-
-```python
-c = [1, 2, 3, [4, 5, 6]]
-
-print(c)
-# prints 
-
-print(len(c)) 
-# prints 4, but we know that the 4th element is itself another list
-
-flatten(c)
-# returns [1, 2, 3, 4, 5, 6]
-
-
-k = [1, 2, [3, 4, [5, 6, [7]]]]
-flatten(k)
-# returns [1, 2, 3, 4, 5, 6, 7]
-
-```
-
-2. Write a function called `recursive_max` that takes a list of integers as input, and recursively finds the max of that list.
+1. Write a function called `recursive_max` that takes a list of integers as input, and recursively finds the max of that list.
 
 Example:
 
@@ -106,7 +82,8 @@ print "Max of E = {}".format(recursive_max(E))
 
 ```
 
-3. Write a recursive function called `reverse_list` that takes a list of elements and reverses them.
+
+2. Write a recursive function called `reverse_list` that takes a list of elements and reverses them.
 
 Example:
 
@@ -125,3 +102,30 @@ print(reverse_list(C))
 print(reverse_list(D))
 # prints []
 ```
+
+3. Define a recursive function called `flatten` that takes in a list, flattens the list and returns the flattened version as a new list.
+
+>**NOTE**: To flatten a list means to take a list of lists (of lists, of lists ...) and put them all in one list.
+
+Example:
+
+```python
+c = [1, 2, 3, [4, 5, 6]]
+
+print(c)
+# prints 
+
+print(len(c)) 
+# prints 4, but we know that the 4th element is itself another list
+
+flatten(c)
+# returns [1, 2, 3, 4, 5, 6]
+
+
+k = [1, 2, [3, 4, [5, 6, [7]]]]
+flatten(k)
+# returns [1, 2, 3, 4, 5, 6, 7]
+
+```
+
+
