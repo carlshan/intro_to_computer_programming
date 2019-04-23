@@ -334,7 +334,7 @@ Even though both of them are using the same `.get_value()` method, different thi
 
 The `self` variable is basically a way for Python classes to refer to specific instances. It allows you to refer to the attributes of the specific instance.
 
-**Okay ... **
+**Okay ...**
 
 Here's the thing to remember.
 
