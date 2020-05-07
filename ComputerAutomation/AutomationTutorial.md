@@ -112,5 +112,5 @@ In addition if you need to locate the exact coordinates of something on your scr
 ## Additional Resources
 If you want to see what else PyAutoGui can do, see the following: 
 
-1. [Here's the official PyAutoGui website that details all the things that you can do with it.](https://pyautogui.readthedocs.io/en/latest/cheatsheet.html).
+1. [Here's the official PyAutoGui website that details all the things that you can do with it.](https://pyautogui.readthedocs.io/en/latest/).
 2. [*Automate The Boring Stuff* by the author of PyAutoGui](https://automatetheboringstuff.com/chapter18/)
